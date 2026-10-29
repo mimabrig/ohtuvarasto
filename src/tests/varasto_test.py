@@ -44,11 +44,10 @@ class TestVarasto(unittest.TestCase):
 
         self.assertAlmostEqual(self.varasto.saldo, 10)
 
-    #epäonnistuva testi, kommentoitu pois.
-    #def test_otetaan_liikaa(self):
-        #otettu_maara = self.varasto.ota_varastosta(400)
+    def test_otetaan_liikaa(self):
+        otettu_maara = self.varasto.ota_varastosta(400)
 
-        #self.assertAlmostEqual(otettu_maara, 10)
+        self.assertAlmostEqual(otettu_maara, 0)
 
     def test_liikaa_otettu_saldo_nolla(self):
         self.assertAlmostEqual(self.varasto.saldo, 0)
